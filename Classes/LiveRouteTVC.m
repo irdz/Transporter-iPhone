@@ -527,7 +527,7 @@
 
 	// only scroll to the current stop the first time the userMarker is placed
 	// only fetch vehicles onces
-	if (self.label.text == kLiveRouteFindingLocation) {
+	if ([self.label.text  isEqual: kLiveRouteFindingLocation]) {
 		[self scrollToStopAnimated:YES];
 
 		if (!self.isBART) [self fetchVehicles];

@@ -249,7 +249,7 @@
 - (void) loadNextViewController:(NSNotification *)note {
 
 	// if a favorite stop was selected
-	if (note.name == @"favoriteStopSelected") {
+	if ([note.name  isEqual: @"favoriteStopSelected"]) {
 
 		Stop *stop = (Stop *)note.object;
 		NSString *agencyShortTitle = [[DataHelper agencyFromStop:stop] shortTitle];

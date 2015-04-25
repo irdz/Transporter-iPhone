@@ -321,7 +321,7 @@ const CGFloat kTransitLegTransferHeight = 26.0;
 			startRequest.agencyShortTitle = transitLeg.agency.shortTitle;
 			endRequest.agencyShortTitle = transitLeg.agency.shortTitle;
 
-			if (transitLeg.agency.shortTitle == @"bart") {
+			if ([transitLeg.agency.shortTitle  isEqual: @"bart"]) {
 
 				startRequest.stopTag = transitLeg.startStop.tag;
 				startRequest.isMainRoute = NO;
@@ -366,7 +366,7 @@ const CGFloat kTransitLegTransferHeight = 26.0;
 
 				TransitLeg *transitLeg = (TransitLeg *)leg;
 
-				if (transitLeg.agency.shortTitle == @"bart") {
+				if ([transitLeg.agency.shortTitle  isEqual: @"bart"]) {
 
 					// match the stop
 					Direction *legDirection = [transitLeg.directions objectAtIndex:0];

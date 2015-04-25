@@ -405,7 +405,7 @@
 						NSString *arrivalDirectionTag = [[arrivals objectAtIndex:0] objectForKey:@"dirTag"];
 
 						if (![direction.tag isEqualToString:arrivalDirectionTag]&&
-						    (arrivalDirectionTag != @"")&&
+						    (![arrivalDirectionTag  isEqual: @""])&&
 						    [direction.route.tag isEqualToString:prediction.route.tag]) {
 
 							[directionSwitches setObject:direction forKey:arrivalDirectionTag];
